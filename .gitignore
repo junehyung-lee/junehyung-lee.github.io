@@ -1,0 +1,12 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+
+# TypeScript compiled output
+web/compiled/
+
+# Source static assets (images/media) — copied to docs/ during build
+web/source/static/
