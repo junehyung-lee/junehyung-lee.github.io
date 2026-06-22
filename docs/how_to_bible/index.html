@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <meta name="theme-color" content="#f8f9fa">
+        <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+        
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>hiwelcome</title>
+        <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/hfs-lab/image/upload/v1631940802/June/IMG_0401-removebg-preview_ojgv9v.png"/>
+        
+        <!-- Theme auto-detect script -->
+        <script>
+            // Detect system dark mode
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Apply theme BEFORE page renders -> no flash
+            document.documentElement.setAttribute(
+                "data-bs-theme",
+                prefersDark ? "dark" : "light"
+            );
+
+            // Optional: stay synced if OS theme changes live
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+                document.documentElement.setAttribute(
+                    "data-bs-theme",
+                    e.matches ? "dark" : "light"
+                );
+            });
+        </script>
+    </head>
+
+    <style>
+        /*
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ddd;
+                background-color: #222;
+            }
+        }
+        */
+
+        #dropdownMenuButton1 {color: #0d6efd}
+        #dropdownMenuList1 {color: #0d6efd}
+        #dropdownMenuList2 {color: #0d6efd}
+        #dropdownMenuList3 {color: #0d6efd}
+        #dropdownMenuList4 {color: #0d6efd}
+        #dropdownMenuList5 {color: #0d6efd}
+    </style>
+
+    <body>
+        <!--Navigation bar at the top-->
+        
+        <nav class="navbar bg-secondary bg-opacity-10">
+            <div class="container justify-content-center">
+                <a class="navbar-brand" href="/">
+                    <!--
+                    <img src="https://res.cloudinary.com/hfs-lab/image/upload/v1631940802/IMG_0401-removebg-preview_ojgv9v.png" alt="" width="50">
+                    -->
+                    <button type="button" class="btn btn-primary position-relative btn-static px-4 navbar-center" href="/">
+                        hiwelcome
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#0d6efd" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+
+                    </button>
+
+                </a>
+            </div>
+        </nav>
+
+        <!--Secondary Nav bar with tabs-->
+        <div class="container mt-3">
+            <ul class="nav me-auto justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/experience">
+                        Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/education">
+                        Academia
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aira-current="page" href="/skill">
+                        Posts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="dropdown d-lg-none text-end">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a id="dropdownMenuList1" class="dropdown-item" href="/">Home</a></li>
+                    <li><a id="dropdownMenuList2" class="dropdown-item" href="/experience">Experience</a></li>
+                    <li><a id="dropdownMenuList4" class="dropdown-item" href="/education">Academia</a></li>
+                    <li><a id="dropdownMenuList3" class="dropdown-item" href="/skill">Posts</a></li>
+                    <li><a id="dropdownMenuList5" class="dropdown-item" href="/contact">Contact</a></li>
+                </ul>
+              </div>
+        </div>
+
+        <div class="container">
+            <hr class="solid">
+            
+<h3>성경, 어떻게 묵상할 것인가 | How to meditate on the Bible 📖</h3>
+
+<div class="row mt-7">
+    <div class="col mt-3">
+
+        <div class="row mb-1">
+            <h5>구약 Old Testment</h5>
+        </div>
+
+        <!-- 율법서 -->
+        <div class="row mb-1">
+            <h6>율법서</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">창세기 Genesis</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">출애굽기 Exodus</a>
+            <a href="/how_to_bible/leviticus" class="list-group-item list-group-item-action">레위기 Leviticus</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">민수기 Numbers</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">신명기 Deuteronomy</a>
+        </div>
+
+        <!-- 역사서 -->
+        <div class="row mt-3 mb-1">
+            <h6>역사서</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">여호수아 Joshua</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">사사기 Judges</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">룻기 Ruth</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">사무엘상 1 Samuel</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">사무엘하 2 Samuel</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">열왕기상 1 Kings</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">열왕기하 2 Kings</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">역대상 1 Chronicles</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">역대하 2 Chronicles</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">에스라 Ezra</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">느헤미야 Nehemiah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">에스더 Esther</a>
+        </div>
+
+        <!-- 시가서 -->
+        <div class="row mt-3 mb-1">
+            <h6>시가서</h6>
+        </div>
+
+            <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">욥기 Job</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">시편 Psalms</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">잠언 Proverbs</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">전도서 Ecclesiastes</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">아가서 Song of Songs</a>
+        </div>
+
+        <!-- 대선지서 -->
+        <div class="row mt-3 mb-1">
+            <h6>대선지서</h6>
+        </div>
+
+            <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">이사야 Isaiah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">예레미야 Jeremiah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">예레미야애가 Lamentations</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">에스겔 Ezkiel</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">다니엘 Daniel</a>
+        </div>
+
+        <!-- 소선지서 -->
+        <div class="row mt-3 mb-1">
+            <h6>소선지서</h6>
+        </div>
+
+            <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">호세아 Hosea</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요엘 Joel</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">아모스 Amos</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">오바댜 Obadiah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요나 Jonah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">미가 Micah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">나훔 Nahum</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">하박국 Habakkuk</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">스바냐 Zephaniah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">학개 Haggai</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">스가랴 Zechariah</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">말라기 Malachi</a>
+        </div>
+
+    </div>
+    <div class="col mt-3">
+
+        <div class="row mb-1">
+            <h5>신약 New Testment</h5>
+        </div>
+
+        <!-- 복음서 -->
+        <div class="row mb-1">
+            <h6>복음서</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">마태복음 Matthew</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">마가복음 Mark</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">누가복음 Luke</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요한복음 John</a>
+        </div>
+
+        <!-- 역사서 -->
+        <div class="row mt-3 mb-1">
+            <h6>역사서</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">사도행전 Acts</a>
+        </div>
+
+        <!-- 바울서신 -->
+        <div class="row mt-3 mb-1">
+            <h6>바울서신</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">로마서 Romans</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">고린도전서 1 Corinthians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">고린도후서 2 Corinthians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">갈라디아서 Galatians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">에베소서 Ephesians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">빌립보서 Philippians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">골로새서 Colossians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">데살로니가전서 1 Thessalonians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">데살로니가후서 2 Thessalonians</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">디도서 Titus</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">빌레몬서 Philemon</a>
+        </div>
+
+        <!-- 일반서신 -->
+        <div class="row mt-3 mb-1">
+            <h6>일반서신</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">히브리서 Hebrews</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">야고보서 James</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">베드로전서 1 Peter</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">베드로후서 2 Peter</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요한일서 1 John</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요한이서 2 John</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">요한삼서 3 John</a>
+            <a href="#" class="list-group-item list-group-item-action disabled">유다서 Jude</a>
+        </div>
+
+        <!-- 예언서 -->
+        <div class="row mt-3 mb-1">
+            <h6>예언서</h6>
+        </div>
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action disabled">요한계시록 Revelation</a>
+         </div>
+
+    </div>
+</div>
+
+<!--
+<div class="list-group mb-7">
+    <a href="/post/writing-matplotlib" class="list-group-item list-group-item-action"> [Python library] Matpolib 101 </a>
+    <a href="/post/writing-conda" class="list-group-item list-group-item-action">[Python] Setting up a separate Python environment per project</a>
+    <a href="/post/writing1" class="list-group-item list-group-item-action">[Visualization] Drawing a Q-Q plot using R and Python</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">[Visualization] Drawing a bell curve for a Gaussian distribution</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">[Prototyping] Creating a simple, but useful, user interface using tkinter</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">[Machine Learning] Creating a virtual bowler, who has better bowling skills than me</a>
+    <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+</div>
+-->
+
+<div class="row">
+    <br>
+</div>
+
+
+            </hr>
+        </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordions = document.querySelectorAll('.accordion-collapse');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('shown.bs.collapse', function () {
+                const header = this.previousElementSibling;
+
+                header.scrollIntoView({
+                    behavior: 'auto',
+                    block: 'start'
+                });
+            });
+        });
+    });
+    </script>
+    </body>
+
+</html>

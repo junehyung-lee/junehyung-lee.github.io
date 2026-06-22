@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <meta name="theme-color" content="#f8f9fa">
+        <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+        
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>hiwelcome</title>
+        <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/hfs-lab/image/upload/v1631940802/June/IMG_0401-removebg-preview_ojgv9v.png"/>
+        
+        <!-- Theme auto-detect script -->
+        <script>
+            // Detect system dark mode
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            // Apply theme BEFORE page renders -> no flash
+            document.documentElement.setAttribute(
+                "data-bs-theme",
+                prefersDark ? "dark" : "light"
+            );
+
+            // Optional: stay synced if OS theme changes live
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+                document.documentElement.setAttribute(
+                    "data-bs-theme",
+                    e.matches ? "dark" : "light"
+                );
+            });
+        </script>
+    </head>
+
+    <style>
+        /*
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ddd;
+                background-color: #222;
+            }
+        }
+        */
+
+        #dropdownMenuButton1 {color: #0d6efd}
+        #dropdownMenuList1 {color: #0d6efd}
+        #dropdownMenuList2 {color: #0d6efd}
+        #dropdownMenuList3 {color: #0d6efd}
+        #dropdownMenuList4 {color: #0d6efd}
+        #dropdownMenuList5 {color: #0d6efd}
+    </style>
+
+    <body>
+        <!--Navigation bar at the top-->
+        
+        <nav class="navbar bg-secondary bg-opacity-10">
+            <div class="container justify-content-center">
+                <a class="navbar-brand" href="/">
+                    <!--
+                    <img src="https://res.cloudinary.com/hfs-lab/image/upload/v1631940802/IMG_0401-removebg-preview_ojgv9v.png" alt="" width="50">
+                    -->
+                    <button type="button" class="btn btn-primary position-relative btn-static px-4 navbar-center" href="/">
+                        hiwelcome
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#0d6efd" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+
+                    </button>
+
+                </a>
+            </div>
+        </nav>
+
+        <!--Secondary Nav bar with tabs-->
+        <div class="container mt-3">
+            <ul class="nav me-auto justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/experience">
+                        Experience
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/education">
+                        Academia
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aira-current="page" href="/skill">
+                        Posts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active d-none d-lg-block" aria-current="page" href="/contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="dropdown d-lg-none text-end">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a id="dropdownMenuList1" class="dropdown-item" href="/">Home</a></li>
+                    <li><a id="dropdownMenuList2" class="dropdown-item" href="/experience">Experience</a></li>
+                    <li><a id="dropdownMenuList4" class="dropdown-item" href="/education">Academia</a></li>
+                    <li><a id="dropdownMenuList3" class="dropdown-item" href="/skill">Posts</a></li>
+                    <li><a id="dropdownMenuList5" class="dropdown-item" href="/contact">Contact</a></li>
+                </ul>
+              </div>
+        </div>
+
+        <div class="container">
+            <hr class="solid">
+            
+<h3>[Visualization] Drawing a Q-Q plot using R and Python</h3>
+<p>Spring 2023 <br>Junehyung Lee</p>
+
+<div class="row mt-4">
+    <p>
+        Before we run parametrical statistical test, there are assumptions for the data that need to be met. 
+        And normality is one of the assumptions, which ensures that the data is normaly distributed and independent from outcome variable.
+        Then, how do we check normality assumption before we run a statistical test? 
+        Of course you can run another statistical test (e.g., Shapiro-Wilk test) that examines whether the data is normal or not.
+        But, looking a Q-Q plot is one of the easiest and quickest way without running a test. 
+    </p>
+</div>
+
+<div class="text-center">
+<figure class="figure">
+  <img src="/post/1/Rplot.png" class="figure-img img-fluid rounded w-50" alt="...">
+  <figcaption class="figure-caption">Figure 1. Q-Q plot generated using ggplot2, R package.</figcaption>
+</figure>
+</div>
+
+<div class="row mt-1">
+    <p>
+
+    </p>
+
+    <code>
+        qqplot_data %>% ggplot(aes(x=z_value, y=residuals)) + geom_point(alpha=0.5) + theme_bw() + <br>
+        geom_line(aes(x=z_value, y=z_value)) + <br>
+        scale_x_continuous(name="Theoretical Quantile", breaks=seq(-3, 5, 1), limits=c(-3, 5)) + <br>
+        scale_y_continuous((name="Residuals"), breaks=seq(-3, 5, 1)) + <br>
+        coord_fixed() + <br>
+        geom_abline(slope=1, intercept=0) <br>
+    </code>
+</div>
+
+<div class="row"><br></div>
+
+<div class="row"><hr></div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#"><</a>
+      </li>
+
+      <li class="page-item"><a class="page-link" href="../skill">List</a></li>
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#">></a>
+      </li>
+    
+    </ul>
+</nav>
+
+<div class="row"><br></div>
+
+<!--<div class="p-1 bg-dark w-100"></div>-->
+
+
+            </hr>
+        </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const accordions = document.querySelectorAll('.accordion-collapse');
+
+        accordions.forEach(acc => {
+            acc.addEventListener('shown.bs.collapse', function () {
+                const header = this.previousElementSibling;
+
+                header.scrollIntoView({
+                    behavior: 'auto',
+                    block: 'start'
+                });
+            });
+        });
+    });
+    </script>
+    </body>
+
+</html>
