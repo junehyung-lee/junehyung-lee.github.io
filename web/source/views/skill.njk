@@ -1,0 +1,136 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+{# <iframe src="https://v2-embednotion.com/12511352038d81398233d838bd09d5e6" style="width: 100%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none;"></iframe> #}
+
+<h3>Posts 📋</h3>
+
+<div class="row">
+    <p class="text-danger">
+    Currently, I'm still working on this part of the website. 
+    More updates to be coming.
+    </p> 
+</div>
+
+<div class="row">
+    <p class="text-muted">
+        {# Here, I archive things and skills that I've used during research projects, courses, and personal interests. 
+        They include, but are not limited to, visualization, machine learning, prototyping, and some design works, too. 
+        So far, I've learned a lot of things and used various tools: statistics, machine learning, data analytics / Python, R, Node.js, Figma, Pixelmator, etc. 
+        This page also serves as a reference for myself in the future.     #}
+
+        Here, I archive the tools and skills I have used across research projects, coursework, and personal interests. 
+        These include visualization, machine learning, prototyping, and some design work. 
+        
+        Over time, I have used a range of methods and tools, including statistical analysis, machine learning techniques, Python, R, Node.js, Figma, and digital graphics tools. 
+    </p>
+    <p class="text-muted">
+        This page also serves as a reference and a personal repository for the future.
+    </p>
+</div>
+
+<!--
+<ul class="col-lg-8 align-self-center list-group list-group-flush">
+    <li class="list-group-item" href="/main/toolbox/tb1">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+</ul>
+-->
+
+{# <div class="list-group mb-7">
+    <a href="/post/writing-matplotlib" class="list-group-item list-group-item-action"> [Python library] Matpolib 101 </a>
+    <a href="/post/writing-conda" class="list-group-item list-group-item-action">[Python] Setting up a separate Python environment per project</a>
+    <a href="/post/writing1" class="list-group-item list-group-item-action">[Visualization] Drawing a Q-Q plot using R and Python</a>
+    <a href="https://metal-drill-73e.notion.site/Visualization-Drawing-a-bell-curve-for-a-Gaussian-distribution-894f0c6805e340f7a2528f53ded96642?pvs=4" class="list-group-item list-group-item-action">[Visualization] Drawing a bell curve for a Gaussian distribution</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">[Prototyping] Creating a simple, but useful, user interface using tkinter</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">[Machine Learning] Creating a virtual bowler, who has better bowling skills than me</a>
+    <!--<a class="list-group-item list-group-item-action disabled">A disabled link item</a>-->
+</div> #}
+
+<div class="list-group mb-7">
+    {% for post in posts %}
+        <a href="{{ post.url }}" class="list-group-item list-group-item-action">
+            {{ post.title }}
+        </a>
+    {% endfor %}
+</div>
+
+<div class="row">
+    <br>
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <!--
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      -->
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+</nav>
+
+<!--
+<div class="row mt-3 mb-4">
+    <div class="accordion" id="accordionSkill">
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Programming Languages
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionSkill">
+            <div class="accordion-body">
+            <strong>Python</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+            <strong>R</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+            <strong>MATLAB</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+            <strong>Javascript & HTML</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+            </div>
+        </div>
+        </div>
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Data Visualization & Manipulation
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSkill">
+            <div class="accordion-body">
+                <strong>ggplot2 in R</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+                <strong>seaborn in Python</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+            </div>
+        </div>
+        </div>
+
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Prototyping
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionSkill">
+            <div class="accordion-body">
+                <strong>figma</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+                <strong>Django</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+                <strong>heroku</strong> <br> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. <br>
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+        </div>
+    </div>
+</div>  
+-->
+
+{% endblock content %}

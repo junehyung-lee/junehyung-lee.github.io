@@ -1,0 +1,63 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+<h3>[Visualization] Drawing a Q-Q plot using R and Python</h3>
+<p>Spring 2023 <br>Junehyung Lee</p>
+
+<div class="row mt-4">
+    <p>
+        Before we run parametrical statistical test, there are assumptions for the data that need to be met. 
+        And normality is one of the assumptions, which ensures that the data is normaly distributed and independent from outcome variable.
+        Then, how do we check normality assumption before we run a statistical test? 
+        Of course you can run another statistical test (e.g., Shapiro-Wilk test) that examines whether the data is normal or not.
+        But, looking a Q-Q plot is one of the easiest and quickest way without running a test. 
+    </p>
+</div>
+
+<div class="text-center">
+<figure class="figure">
+  <img src="/post/1/Rplot.png" class="figure-img img-fluid rounded w-50" alt="...">
+  <figcaption class="figure-caption">Figure 1. Q-Q plot generated using ggplot2, R package.</figcaption>
+</figure>
+</div>
+
+<div class="row mt-1">
+    <p>
+
+    </p>
+
+    <code>
+        qqplot_data %>% ggplot(aes(x=z_value, y=residuals)) + geom_point(alpha=0.5) + theme_bw() + <br>
+        geom_line(aes(x=z_value, y=z_value)) + <br>
+        scale_x_continuous(name="Theoretical Quantile", breaks=seq(-3, 5, 1), limits=c(-3, 5)) + <br>
+        scale_y_continuous((name="Residuals"), breaks=seq(-3, 5, 1)) + <br>
+        coord_fixed() + <br>
+        geom_abline(slope=1, intercept=0) <br>
+    </code>
+</div>
+
+<div class="row"><br></div>
+
+<div class="row"><hr></div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#"><</a>
+      </li>
+
+      <li class="page-item"><a class="page-link" href="../skill">List</a></li>
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#">></a>
+      </li>
+    
+    </ul>
+</nav>
+
+<div class="row"><br></div>
+
+<!--<div class="p-1 bg-dark w-100"></div>-->
+
+{% endblock content %}

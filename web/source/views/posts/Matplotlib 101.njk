@@ -1,0 +1,169 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+<h1>[Python library] Matplotlib 101</h1>
+<p>Fall 2023 <br>Junehyung Lee</p>
+
+<div class = "row mt-4">
+
+    <h3>Installing the python library </h3>
+    <p>To install the python library, matplotlib, type below line to your terminal. </p>
+    <br>
+    <code> python -m pip install matplotlib </code>
+
+</div>
+
+<div class="row mt-4">
+    <h3>Loading the library and initiating an empty figure in matplotlib </h3>
+    <p>To load the installed python libary: (include this line before use <code>plt</code> in the script)</p>
+    {# <br> #}
+    <code> import matplotlib.pyplot as plt </code>
+    <br> <br>
+
+    <div class="row">
+        <div class="col">
+            <p>To initiate an empty figure with single ax and a size of 8" x 6": </p> <br>
+            <code> fig, ax = plt.subplots(figsize=(8, 6)) </code>
+        </div>
+        <div class="col">
+        <p>To initiate an empty figure with multiple axes <br>(e.g., 6 axes with 2 x 3 layout): </p>
+        {# <br> #}
+        <code> fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(8, 6)) </code>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <h3>Types of plots that are useful in matplotlib</h3>
+
+    <li>plot: useful when looking at a single feature over a time (i.e., time series data).</li>
+    <li>scatter: useful when looking at two features and relationship between them.</li>
+    <li>axline, axhline, axvline</li>
+
+    <div class="row mt-4">
+        <h4> Examples </h4>
+        <p> "mtcars" dataset has been used for the following examples. 
+            The dataset also can be obtained at <a href='https://gist.githubusercontent.com/ZeccaLehn/4e06d2575eb9589dbe8c365d61cb056c/raw/64f1660f38ef523b2a1a13be77b002b98665cdfe/mtcars.csv'>this url</a>.
+        </p>
+        <code>
+            import pandas as pd <br>
+            <br>
+            data = pd.read_csv('mtcars.csv')<br>
+        </code>
+        <figure class="figure">
+            <img src='https://res.cloudinary.com/hfs-lab/image/upload/v1701897756/June/table_mtcars_tu1qax.png' class="figure-img img-fluid rounded w-100">
+        </figure>
+    </div>
+
+    <div class="row mt-4">
+        <h4> Matplotlib scatter </h4>
+        <div class="col">
+            <code>
+                import matplotlib.pyplot as plt <br>
+                <br>
+                fig, ax = plt.subplots(figsize=(8, 6)) <br>
+                <br>
+                ax.scatter(x=data['Weight'], y=data['MPG']) <br>
+                <br>
+                plt.tight_layout() <br>
+                plt.show() <br>
+                <br>
+                plt.savefig('mtcars-wt_mpg.png', dpi=300) <br>
+                <br>
+                plt.close()         # Run this line to close the plot.
+            </code>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="https://res.cloudinary.com/hfs-lab/image/upload/v1701898126/June/mtcars-wt_mpg_u0dhue.png" class="figure-img img-fluid rounded w-100">
+            </figure>
+        </div>
+    </div>
+
+    <div class="row mt-4"> 
+        <h4> Adding labels for x-axis and y-axis </h4>
+
+        <div class="col">
+            <code>
+                import matplotlib.pyplot as plt <br>
+                <br>
+                fig, ax = plt.subplots(figsize=(8, 3)) <br>
+                <br>
+                ax.scatter(x=data['Weight'], y=data['MPG']) <br>
+                <br>
+                ax.set_xlabel('Weight of vehicle (per 1,000 lbs)') <br>
+                ax.set_ylabel('Milers per gallon (mpg)') <br>
+                <br>
+                ax.tick_params(axis='both', labelsize=15) <br>
+                <br>
+                plt.tight_layout() <br>
+                plt.show() <br>
+                <br>
+                plt.savefig('mtcars-wt_mpg-with labels.png', dpi=300) <br>
+            </code>
+        </div>
+
+        <div class="col">
+            <figure class="figure">
+                <img src="https://res.cloudinary.com/hfs-lab/image/upload/v1701898863/June/mtcars-wt_mpg-with_labels_mw5cah.png" class="figure-img img-fluid rounded w-100">
+            </figure>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <h4>Plotting them in different colors</h4>
+        <p>Let's say we want to plot them in differnet colors based on whether its engine is V-shape or not.</p>
+
+        <div class="col">
+            <code>
+                import matplotlib.pyplot as plt <br>
+                <br>
+                fig, ax = plt.subplots(figsize=(8, 3)) <br>
+                <br>
+                ax.scatter(x=data['Weight'], y=data['MPG'], label=data['V-shape']) <br>
+                <br>
+                ax.set_xlabel('Weight of vehicle (per 1,000 lbs)') <br>
+                ax.set_ylabel('Milers per gallon (mpg)') <br>
+                <br>
+                ax.tick_params(axis='both', labelsize=15) <br>
+                <br>
+                plt.tight_layout() <br>
+                plt.show() <br>
+                <br>
+                plt.savefig('mtcars-wt_mpg-with labels.png', dpi=300) <br>
+            </code>
+        </div>
+
+        <div class="col">
+            <figure class="figure">
+                <img src="https://res.cloudinary.com/hfs-lab/image/upload/v1701899505/June/mtcars-wt_mpg-with_colors_xur9t8.png" class="figure-img img-fluid rounded w-100">
+            </figure>            
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row"><br></div>
+<div class="row"><hr></div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#"><</a>
+      </li>
+
+      <li class="page-item"><a class="page-link" href="../skill">List</a></li>
+
+      <li class="page-item disabled">
+        <a class="page-link" href="#">></a>
+      </li>
+    
+    </ul>
+</nav>
+
+<div class="row"><br></div>
+
+{% endblock content %}

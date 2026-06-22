@@ -1,0 +1,76 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+<h3>About me 🤔</h3>
+
+<div class="container">
+<div class="row mt-1 justify-content-center">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    Hi and welcome.
+                </p>
+
+                <p class="card-text" align="justify">
+                    Thank you for taking the time to visit. 
+                    My name is Junehyung Lee, and I’m originally from Seoul, South Korea.
+                </p>
+
+                <p class="card-text" align="justify">
+                    My professional interests include Human Factors, User Research, and UI and UX.
+
+                    I am currently pursuing a PhD at the <a href="https://www.ou.edu">University of Oklahoma</a>
+                    and working as a research assistant in the <a href="https://humanfactors.oucreate.com">Human Factors & Simulation Lab</a>. 
+                    Previously, I completed a UX Research Internship at <a href="https://www.loves.com">Love's Travel Stops</a>.
+
+                    {# I am currently pursuing a PhD degree at the the <a href="https://www.ou.edu">University of Oklahoma</a>, 
+                    and working as a research assistant at <a href="https://humanfactors.oucreate.com">Human Factors & Simulation Lab</a>. 
+                    I previously did an internship at <a href="https://www.loves.com">Love's Travel Stops</a> as a UX Research Intern. #}
+                    <br>
+                    On this website, you will find a collection of my ongoing and past projects. 
+                    I invite you to explore the menus above to learn more about my work, research contributions, and areas of interest.
+                </p>
+
+                <p class="card-text" align="left">
+                    Best, <br>
+                    June
+                </p> 
+            </div>    
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <br>
+</div>
+
+{# <h3 class="row">A few personal updates 📨</h3> #}
+<div class="d-flex align-items-end" style="height: 40px;"> <h3 class="row mb-0">A few personal updates 📨</h3> </div>
+
+<div class="row justify-content-center">
+    <div class="row g-4 mt-0">
+        {% for item in updates %}
+        <div class="col-12 col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ item.date }}</h6>
+
+                    <picture>
+                        <img src="{{ item.image }}" class="img-fluid img-thumbnail" alt="">
+                    </picture>
+
+                    <p class="card-text mt-2">{{ item.text }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row">
+    <br>
+</div>
+</div>
+{% endblock content %}

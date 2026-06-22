@@ -1,0 +1,44 @@
+{% extends 'layout.njk' %}
+{% block content %}
+
+{# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css"> #}
+{# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css"> #}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<style>
+@media (prefers-color-scheme: dark) {
+  .markdown-body {
+    background-color: #212529; /* your dark mode background color */
+  }
+}
+</style>
+
+<div class="container my-4 markdown-body">
+    {{ html | safe }}
+</div>
+
+{# <div class="card mx-auto my-4" style="max-width: 800px;">
+    <div class="card-body">
+        <article class="markdown-body">
+            {{ html | safe }}
+        </article>
+    </div>
+</div> #}
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+      {# <li class="page-item disabled">
+        <a class="page-link" href="#"><</a>
+      </li> #}
+
+      <li class="page-item"><a class="page-link" href="../skill">Go back to the list</a></li>
+
+      {# <li class="page-item disabled">
+        <a class="page-link" href="#">></a>
+      </li> #}
+    
+    </ul>
+</nav>
+{% endblock content %}
